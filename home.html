@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Eletiva Davi</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+   <center>
+    <h1>Atividade de Eletiva</h1>
+   </center>
+    {% for post in posts %}
+    <div class="container">
+        <h1 class="titulo">{{ post.titulo }}</h1>
+        <p class="texto">{{ post.conteudo }}</p>
+        <a class="link" href="{{ post.url }}">Ler notícia completa</a>
+        <div class="data">
+            <p class="dt">{{ post.data }}</p>
+        </div>
+    </div>
+    <br>
+    {% endfor %}
+</body>
+
+</html>
